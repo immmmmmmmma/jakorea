@@ -1,0 +1,22 @@
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
+
+
+
+
+body{
+  font-family: 'NanumSquareLight';
+  font-family: 'NanumSquare';
+  font-family: 'NanumSquareBold';
+  font-family: 'NanumSquareExtraBold';
+  font-family: 'NanumSquareAcb';
+  font-family: 'NanumSquareAceb';
+  font-family: 'NanumSquareAcl';
+  font-family: 'NanumSquareAcr';
+}
+
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,li{list-style: none;}
+a:link,a:visited{
+    text-decoration: none;
+}
