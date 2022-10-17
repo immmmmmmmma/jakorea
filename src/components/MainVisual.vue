@@ -1,13 +1,13 @@
 <template>
     <div class="mainVisual">
         <swiper :modules="modules" v-bind="swiperOptions" class="mySwiper">
-            <swiper-slide v-for="(item,i) in swiperView" :key="item" class="swiperWrap d-flex row">
-                <div class="innerText col-6">
+            <swiper-slide v-for="(item,i) in swiperView" :key="i" class="swiperWrap d-flex row">
+                <div class="innerText col-12 col-md-6">
                     <h2 v-html="item.mainTitle"></h2>
-                    <p v-html="item.subTitle" class="mb-5"></p>
+                    <p v-html="item.subtitle"></p>
                     <button class="btn">자세히 보기<i class="fa-solid fa-arrow-right-long"></i></button>
                 </div>
-                <div class="videoPlayer col-6">
+                <div class="videoPlayer col-12 col-md-6">
                     <video :src="`./images/01mainSlide_video/${item.mVideo}`" muted autoplay class="video"></video>
                 </div>
             </swiper-slide>
@@ -66,6 +66,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('../assets/style.css');
     .mainVisual{
         width: 100%;
         background: #E1EFF2;
@@ -74,9 +75,33 @@ export default {
     }
 
     .videoPlayer{
+        margin-left: auto;
         .video{
             height: 745px;
             width: 100%;
         }
+    }
+    .swiperWrap{
+    }
+    .innerText{
+        color: #285f74;
+        position: absolute;
+        left: 36%;
+        transform: translateX(-50%);
+        h2{
+            font-size: 66px;
+            font-weight: 200;
+        }
+        p{
+            font-size: 18px;
+            line-break: 28.8px;
+        }
+        span{
+            font-weight: 700;
+        }
+    }
+    
+    @media (max-width: 768px){
+        
     }
 </style>

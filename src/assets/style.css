@@ -4,14 +4,7 @@
 
 
 body{
-  font-family: 'NanumSquareLight';
   font-family: 'NanumSquare';
-  font-family: 'NanumSquareBold';
-  font-family: 'NanumSquareExtraBold';
-  font-family: 'NanumSquareAcb';
-  font-family: 'NanumSquareAceb';
-  font-family: 'NanumSquareAcl';
-  font-family: 'NanumSquareAcr';
 }
 
 
@@ -19,4 +12,17 @@ body{
 ul,li{list-style: none;}
 a:link,a:visited{
     text-decoration: none;
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+}
+.container{
+  --bs-gutter-x: 0 !important;
+}
+@media (max-width: 768px){
+  .navbar{
+    display: none !important;
+  }
+
 }
