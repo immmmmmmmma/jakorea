@@ -20,9 +20,11 @@ a:link,a:visited{
 .container{
   --bs-gutter-x: 0 !important;
 }
+.btn{
+  --bs-btn-border-width: 0;
+}
 @media (max-width: 768px){
   .navbar{
     display: none !important;
   }
-
 }

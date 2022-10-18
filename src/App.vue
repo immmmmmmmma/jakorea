@@ -1,7 +1,7 @@
 <template>
   <MainHeader></MainHeader>
   <MainVisual :mainsData="msData"></MainVisual>
-  <IconBanner :ibData="ibData"></IconBanner>
+  <icon-banner :ibData="ibData"></icon-banner>
   <EduSlide></EduSlide>
   <CountBanner></CountBanner>
   <NoticeSlide></NoticeSlide>

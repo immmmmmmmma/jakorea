@@ -5,7 +5,12 @@
                 <div class="innerText col-12 col-md-6">
                     <h2 v-html="item.mainTitle"></h2>
                     <p v-html="item.subtitle"></p>
-                    <button class="btn">자세히 보기<i class="fa-solid fa-arrow-right-long"></i></button>
+                    <button class="btn">
+                        <span>
+                        자세히 보기<i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                        <div class="gradient"></div>
+                    </button>
                 </div>
                 <div class="videoPlayer col-12 col-md-6">
                     <video :src="`./images/01mainSlide_video/${item.mVideo}`" muted autoplay class="video"></video>
@@ -86,6 +91,7 @@ export default {
     .innerText{
         color: #285f74;
         position: absolute;
+        top: 20%;
         left: 36%;
         transform: translateX(-50%);
         h2{
@@ -99,8 +105,47 @@ export default {
         span{
             font-weight: 700;
         }
+        .btn{
+            margin-top: 85px;
+            position: relative;
+            padding: 22px 35px;
+            border-radius: 40px;
+            overflow: hidden;
+            display: inline-block;
+            background: #fff;
+            box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
+            transition: .3s;
+            span{
+                z-index: 3;
+                i{
+                    margin-left: 48px;
+                }
+            }
+            &:hover span{
+                color: #fff;
+            }
+            .gradient{
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient( -45deg,#00a0af,#00c0ca, #008b9c, #28708b,#285f74, #22404d,#285f74,#28708b, #008b9c,#00c0ca,#00a0af) !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: .3s;
+                background-size: 1000%;
+            }
+            &:hover .gradient{
+                animation: animate 10s linear infinite;
+                opacity: 1;
+            }
+        }
     }
     
+    @keyframes animate{
+
+    }
     @media (max-width: 768px){
         
     }
