@@ -1,25 +1,31 @@
 <template>
     <div class="mainVisual">
         <swiper :modules="modules" v-bind="swiperOptions" class="mySwiper">
-            <swiper-slide v-for="(item,i) in swiperView" :key="i" class="swiperWrap d-flex row">
-                <div class="innerText col-12 col-md-6">
-                    <h2 v-html="item.mainTitle"></h2>
-                    <p v-html="item.subtitle"></p>
-                    <button class="btn">
-                        <span>
-                        자세히 보기<i class="fa-solid fa-arrow-right-long"></i>
-                        </span>
-                        <div class="gradient"></div>
-                    </button>
-                </div>
-                <div class="videoPlayer col-12 col-md-6">
-                    <video :src="`./images/01mainSlide_video/${item.mVideo}`" muted autoplay class="video"></video>
+            <swiper-slide v-for="(item,i) in swiperView" :key="i" class="swiperWrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="innerText col-12 col-md-6">
+                            <div class="innerBox">
+                                <h2 v-html="item.mainTitle"></h2>
+                                <p v-html="item.subtitle"></p>
+                                <button class="btn">
+                                    <span>
+                                    자세히 보기<i class="fa-solid fa-arrow-right-long"></i>
+                                    </span>
+                                    <div class="gradient"></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="videoPlayer col-12 col-md-6">
+                            <video :src="`./images/01mainSlide_video/${item.mVideo}`" muted autoplay class="video"></video>
+                        </div>
+                    </div>
                 </div>
             </swiper-slide>
         </swiper>
         <div class="btnWrap">
-        <div class="prev">이전</div>
-        <div class="next">다음</div>
+            <div class="prev">이전</div>
+            <div class="next">다음</div>
         </div>
     </div>
 </template>
@@ -78,6 +84,11 @@ export default {
         height: 745px;
         overflow: hidden;
     }
+@media (max-width: 768px){
+      .mainVisual{
+        height: initial;
+      }  
+    }    
 
     .videoPlayer{
         margin-left: auto;
@@ -90,10 +101,12 @@ export default {
     }
     .innerText{
         color: #285f74;
-        position: absolute;
-        top: 20%;
-        left: 36%;
-        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items:start;
+        justify-content: center;
+        // justify-self: start;
+
         h2{
             font-size: 66px;
             font-weight: 200;

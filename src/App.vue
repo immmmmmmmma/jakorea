@@ -2,7 +2,7 @@
   <MainHeader></MainHeader>
   <MainVisual :mainsData="msData"></MainVisual>
   <icon-banner :ibData="ibData"></icon-banner>
-  <EduSlide></EduSlide>
+  <EduSlide :epData="epData"></EduSlide>
   <CountBanner></CountBanner>
   <NoticeSlide></NoticeSlide>
   <NewsModal></NewsModal>
