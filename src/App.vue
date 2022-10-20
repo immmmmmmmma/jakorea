@@ -4,7 +4,11 @@
   <icon-banner :ibData="ibData"></icon-banner>
   <EduSlide :epData="epData"></EduSlide>
   <CountBanner></CountBanner>
-  <NoticeSlide></NoticeSlide>
+  <NoticeTab    
+    :noData="noData"
+    :stData="stData"
+    :neData="neData">
+  </NoticeTab>
   <NewsModal></NewsModal>
   <SubVisual></SubVisual>
   <SupportSlide></SupportSlide>
@@ -20,7 +24,7 @@ import MainVisual from './components/MainVisual.vue'
 import IconBanner from './components/IconBanner.vue'
 import EduSlide from './components/EduSlide.vue'
 import CountBanner from './components/CountBanner.vue'
-import NoticeSlide from './components/NoticeSlide.vue'
+import NoticeTab from './components/NoticeTab.vue'
 import NewsModal from './components/NewsModal.vue'
 import SubVisual from './components/SubVisual.vue'
 import SupportSlide from './components/SupportSlide.vue'
@@ -45,7 +49,7 @@ export default {
     IconBanner,
     EduSlide,
     CountBanner,
-    NoticeSlide,
+    NoticeTab,
     NewsModal,
     SubVisual,
     SupportSlide,

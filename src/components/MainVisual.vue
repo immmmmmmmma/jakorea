@@ -142,6 +142,8 @@ export default {
                 width: 100%;
                 height: 100%;
                 background-image: linear-gradient( -45deg,#00a0af,#00c0ca, #008b9c, #28708b,#285f74, #22404d,#285f74,#28708b, #008b9c,#00c0ca,#00a0af) !important;
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -150,15 +152,17 @@ export default {
                 background-size: 1000%;
             }
             &:hover .gradient{
-                animation: animate 10s linear infinite;
+                animation: gradient 10s linear infinite;
                 opacity: 1;
             }
         }
     }
     
-    @keyframes animate{
-
-    }
+    @keyframes gradient {
+     0% { background-position: 0% 50%; } 
+     50% { background-position: 100% 50%; } 
+     100% { background-position: 0% 50%; } 
+     }
     @media (max-width: 768px){
         
     }
