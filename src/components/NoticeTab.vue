@@ -1,58 +1,83 @@
 <template>
-  <div class="tabVisual">
-      <div class="container">
-        <h2>기관소식</h2>
-        <div class="row mb-3">
-            <div class="col-md-1 tab" @click="tab=1" :class="{active:tab==1}">공지사항</div>
-            <div class="col-md-1 tab" @click="tab=2" :class="{active:tab==2}">스토리</div>
-            <div class="col-md-1 tab" @click="tab=3" :class="{active:tab==3}">언론보도</div>
+  <div class="slideWrap">
+    <div class="container menuWrap">
+        <div class="row tabMenu">
+        <h1>JA 기관소식</h1>
+          <div class="col tab" @click="tab=1" :class="{active:tab==1}">
+            공지사항<span></span>
+          </div>
+          <div class="col tab" @click="tab=2" :class="{active:tab==2}">
+            스토리<span></span>
+          </div>
+          <div class="col tab" @click="tab=3" :class="{active:tab==3}">
+            언론보도<span></span>
+          </div>
         </div>
         <TabSlide
-        :noData="noData"
-        :stData="stData"
-        :neData="neData"
-        >
+            :noData="noData"
+            :stData="stData"
+            :neData="neData"
+            :tab="tab">
         </TabSlide>
-      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import TabSlide from "./components/TabSlide.vue"
+import TabSlide from "../components/TabSlide.vue";
 
 export default {
-    components:{
-        TabSlide,
-    },
-    props:[
-        "noData",
-        "stData",
-        "neData"
+  components: { TabSlide },
+  props: [
+    "noData",
+    "stData",
+    "neData"
     ],
-    data(){
-        return {
-            tab:1,
-        }
-    }
-}
+  data() {
+    return {
+      tab: 1,
+    };
+  },
+};
 </script>
 
-<style lang="scss">
-    .tabVisual{
-        .tab{
-            text-align: center;
-            height: 40px;
-            position: relative;
-            cursor:pointer;
-            &.active:after{
-                content:"";
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background: rgb(34, 111, 141);
-                left: 0;bottom: 0;
-            }
-        }
-
+<style lang="scss" scoped>
+.container{
+    display: flex;
+    flex-direction: column;
+    h1 {
+      width: 300px;
+      font-weight: 700;
     }
+}
+
+.tabMenu {
+    width: 100%;
+    display: flex;
+    font-size: 1.3em;
+    div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    span {
+        width: 70%;
+        height: 5px;
+        position: absolute;
+        bottom: 10%;
+        background: #365a66;
+        display: none;
+    }
+    &.active {
+        span {
+        display: block;
+        }
+    }
+  }
+}
+  .notice-slide-tap {
+    height: 100%;
+  }
 </style>

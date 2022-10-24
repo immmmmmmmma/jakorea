@@ -4,12 +4,8 @@
   <icon-banner :ibData="ibData"></icon-banner>
   <EduSlide :epData="epData"></EduSlide>
   <CountBanner></CountBanner>
-  <NoticeTab    
-    :noData="noData"
-    :stData="stData"
-    :neData="neData">
-  </NoticeTab>
-  <NewsModal></NewsModal>
+  <NoticeTab :noData="noData" :stData="stData" :neData="neData"></NoticeTab>
+  <NewsModal :reData="reData" :anData="anData"></NewsModal>
   <SubVisual></SubVisual>
   <SupportSlide></SupportSlide>
   <SubcribeBanner></SubcribeBanner>

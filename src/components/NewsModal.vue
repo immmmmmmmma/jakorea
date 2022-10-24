@@ -1,13 +1,28 @@
 <template>
-  
+    <div class="newWrap container">
+        <recruit-modal :reData="reData"></recruit-modal>
+        <announce-modal :anData="anData"></announce-modal>
+    </div>
 </template>
 
 <script>
-export default {
+import AnnounceModal from './AnnounceModal.vue'
+import RecruitModal from './RecruitModal.vue'
 
+export default {
+  components: {
+    RecruitModal,
+    AnnounceModal,
+    },
+    props:[
+        "reData",
+        "anData",
+    ],
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    .newWrap{
+        display: flex;
+    }
 </style>

@@ -38,6 +38,7 @@ export default {
     display: flex;
     justify-content: center;
     padding: 100px 100px;
+    margin-bottom: 180px;
     div{
         // overflow: hidden;
 
