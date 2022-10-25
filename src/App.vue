@@ -7,7 +7,7 @@
   <NoticeTab :noData="noData" :stData="stData" :neData="neData"></NoticeTab>
   <NewsModal :reData="reData" :anData="anData"></NewsModal>
   <SubVisual></SubVisual>
-  <SupportSlide></SupportSlide>
+  <SupportSlide :suData="suData"></SupportSlide>
   <SubcribeBanner></SubcribeBanner>
   <Footer></Footer>
 

@@ -1,7 +1,7 @@
 <template>
     <div class="newWrap container">
-        <recruit-modal :reData="reData"></recruit-modal>
-        <announce-modal :anData="anData"></announce-modal>
+        <recruit-modal :reData="reData">A</recruit-modal>
+        <announce-modal :anData="anData">B</announce-modal>
     </div>
 </template>
 

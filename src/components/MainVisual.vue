@@ -115,46 +115,44 @@ export default {
             font-size: 18px;
             line-break: 28.8px;
         }
+    }
+    .btn{
+        margin-top: 85px;
+        position: relative;
+        padding: 22px 35px !important;
+        border-radius: 40px !important;
+        overflow: hidden;
+        display: inline-block !important;
+        background: #fff;
+        box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
+        transition: .3s !important;
         span{
             font-weight: 700;
+            z-index: 3;
+            i{
+                margin-left: 48px;
+            }
         }
-        .btn{
-            margin-top: 85px;
-            position: relative;
-            padding: 22px 35px;
-            border-radius: 40px;
-            overflow: hidden;
-            display: inline-block;
-            background: #fff;
-            box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
+        &:hover span{
+            color: #fff;
+        }
+        .gradient{
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient( -45deg,#00a0af,#00c0ca, #008b9c, #28708b,#285f74, #22404d,#285f74,#28708b, #008b9c,#00c0ca,#00a0af) !important;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
             transition: .3s;
-            span{
-                z-index: 3;
-                i{
-                    margin-left: 48px;
-                }
-            }
-            &:hover span{
-                color: #fff;
-            }
-            .gradient{
-                z-index: -1;
-                width: 100%;
-                height: 100%;
-                background-image: linear-gradient( -45deg,#00a0af,#00c0ca, #008b9c, #28708b,#285f74, #22404d,#285f74,#28708b, #008b9c,#00c0ca,#00a0af) !important;
-                background-size: 400% 400%;
-                animation: gradient 15s ease infinite;
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0;
-                transition: .3s;
-                background-size: 1000%;
-            }
-            &:hover .gradient{
-                animation: gradient 10s linear infinite;
-                opacity: 1;
-            }
+            background-size: 1000%;
+        }
+        &:hover .gradient{
+            animation: gradient 10s linear infinite;
+            opacity: 1;
         }
     }
     
