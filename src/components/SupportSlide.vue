@@ -45,12 +45,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 
 import "swiper/css/grid";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
 // import required modules
-import { Grid, Pagination, Navigation } from "swiper";
+import { Grid, Navigation } from "swiper";
 
 export default {
   components: {
@@ -59,16 +58,13 @@ export default {
   },
   setup() {
     return {
-      modules2: [Grid, Pagination, Navigation],
+      modules2: [Grid, Navigation],
        swiperOptions2:{
         slidesPerView:3,
         grid:{
               rows: 3,
             },
         spaceBetween:10,
-        pagination:{
-              clickable: true,
-            },
         navigation:{
           nextEl:'.paging .next',
           prevEl:'.paging .prev',
@@ -83,6 +79,9 @@ export default {
 </script>
 
 <style lang="scss">
+.Main09Sponsor{
+  margin-bottom: 180px;
+}
     .txt{
         position: relative;
         p{

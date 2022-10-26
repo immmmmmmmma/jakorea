@@ -8,7 +8,7 @@
   <NewsModal :reData="reData" :anData="anData"></NewsModal>
   <SubVisual></SubVisual>
   <SupportSlide :suData="suData"></SupportSlide>
-  <SubcribeBanner></SubcribeBanner>
+  <SubscribeBanner></SubscribeBanner>
   <Footer></Footer>
 
 
@@ -24,7 +24,7 @@ import NoticeTab from './components/NoticeTab.vue'
 import NewsModal from './components/NewsModal.vue'
 import SubVisual from './components/SubVisual.vue'
 import SupportSlide from './components/SupportSlide.vue'
-import SubcribeBanner from './components/SubcribeBanner.vue'
+import SubscribeBanner from './components/SubscribeBanner.vue'
 import Footer from './components/Footer.vue'
 
 import msData from '@/data/01mainSlide.js'
@@ -49,7 +49,7 @@ export default {
     NewsModal,
     SubVisual,
     SupportSlide,
-    SubcribeBanner,
+    SubscribeBanner,
     Footer,
   },
   data(){

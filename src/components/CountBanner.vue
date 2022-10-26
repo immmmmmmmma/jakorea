@@ -33,8 +33,8 @@ export default {
 <style lang="scss">
 .countBannerWrap{
     background: linear-gradient(135deg,  #e0aff9 0%,#01a1ad 68%);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-size: 500% 500%;
+    animation: gradient 30s ease infinite;
     display: flex;
     justify-content: center;
     padding: 100px 100px;
@@ -46,6 +46,7 @@ export default {
             border-radius: 30px;
             width: 400px;
         }
+        margin-right: 40px;
     }
     
 }

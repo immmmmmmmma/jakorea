@@ -30,6 +30,7 @@ export default {
     display: flex;
     width: 1400px;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 .iconBanner{
     .iconBox{

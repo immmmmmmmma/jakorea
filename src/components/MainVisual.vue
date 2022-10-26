@@ -4,7 +4,7 @@
             <swiper-slide v-for="(item,i) in swiperView" :key="i" class="swiperWrap">
                 <div class="container">
                     <div class="row">
-                        <div class="innerText col-12 col-md-6">
+                        <div class="innerText col-12 col-md-6 mv">
                             <div class="innerBox">
                                 <h2 v-html="item.mainTitle"></h2>
                                 <p v-html="item.subtitle"></p>
@@ -100,20 +100,26 @@ export default {
     .swiperWrap{
     }
     .innerText{
-        color: #285f74;
-        display: flex;
-        flex-direction: column;
-        align-items:start;
-        justify-content: center;
-        // justify-self: start;
-
-        h2{
-            font-size: 66px;
-            font-weight: 200;
-        }
-        p{
-            font-size: 18px;
-            line-break: 28.8px;
+        &.mv{
+            display: flex;
+            flex-direction: column;
+            align-items:start;
+            justify-content: center;
+            // justify-self: start;
+    
+            h2{
+                color: #285f74;
+                font-size: 66px;
+                font-weight: 200;
+                span{
+                    font-weight: 700;
+                }
+            }
+            p{
+                color: #285f74;
+                font-size: 18px;
+                line-break: 28.8px;
+            }
         }
     }
     .btn{
@@ -123,9 +129,9 @@ export default {
         border-radius: 40px !important;
         overflow: hidden;
         display: inline-block !important;
-        background: #fff;
         box-shadow: 0 0 17px 6px rgb(0 0 0 / 9%);
         transition: .3s !important;
+        background: #fff;
         span{
             font-weight: 700;
             z-index: 3;
