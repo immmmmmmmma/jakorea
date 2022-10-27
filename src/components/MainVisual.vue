@@ -97,13 +97,11 @@ export default {
             width: 100%;
         }
     }
-    .swiperWrap{
-    }
     .innerText{
         &.mv{
             display: flex;
             flex-direction: column;
-            align-items:start;
+            align-items:flex-start;
             justify-content: center;
             // justify-self: start;
     

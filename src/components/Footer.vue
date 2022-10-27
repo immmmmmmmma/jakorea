@@ -84,7 +84,7 @@ export default {
     }
     .footerBtn{
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         margin-left: auto;
         width: 237px;
