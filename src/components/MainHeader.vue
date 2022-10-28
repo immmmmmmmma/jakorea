@@ -2,7 +2,7 @@
     <div class="header">
         <div class="headerWrap d-flex container">
             <h1 class="logo"><a href=""><img :src="`./images/new_logo.svg`" alt="" class="logoImg"></a></h1>
-            <nav class="row">
+            <nav class="row col-9 navFncWrap">
                 <div class="fnc">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href=""><i class="fa-solid fa-user"></i></a>
@@ -11,7 +11,7 @@
                     <a href=""><i class="fa-brands fa-youtube"></i></a>
                     <a href=""><i class="fa-solid fa-bars"></i></a>
                 </div>
-                <ul class="navbar col-12">
+                <ul class="navbar col-9">
                     <li><a href="">제이에이코리아</a></li>
                     <li><a href="">투명경영</a></li>
                     <li><a href="">교육사업</a></li>
@@ -40,8 +40,12 @@ export default {
     .logoImg{
         width: 218px;
     }
+    .navFncWrap{
+        margin-left: 40px;
+    }
     .fnc{
-        margin-left: auto !important;
+        display: flex;
+        justify-content: flex-end;
         a{
             padding: 5px;
             font-size: 20px;
@@ -55,8 +59,10 @@ export default {
     }
     .navbar{
         display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
         li{
-            padding: 10px 45px 28px 45px;
+            padding: 10px 0;
             a{
                 font-size: 19px;
                 color: #333;
@@ -65,5 +71,9 @@ export default {
         }
 
     }
-    
+    @media (max-width: 768px){
+        .navbar{
+            display: none;
+        }
+    }    
 </style>

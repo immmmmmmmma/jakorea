@@ -1,6 +1,6 @@
 <template>
-    <div class="iconBannerWrap">
-        <div class="iconBanner"
+    <div class="iconBannerWrap container">
+        <div class="iconBanner row"
         v-for="(item,i) in ibData" :key="i">
             <div class="iconBox">
                 <img :src="`./images/02iconBanner/${item.src}`" alt="">
@@ -28,11 +28,11 @@ export default {
 @import url('../assets/style.css');
 .iconBannerWrap{
     display: flex;
-    width: 1400px;
     margin: 0 auto;
     margin-bottom: 100px;
 }
 .iconBanner{
+    margin: 0 auto;
     .iconBox{
         width: 280px;
         height: 333px;
@@ -61,4 +61,14 @@ export default {
         }
     }
 }
+@media (max-width: 768px){
+    .iconBannerWrap{
+        overflow: hidden;
+    }
+.iconBox{
+    p{
+        display: none;
+    }
+}
+}    
 </style>
