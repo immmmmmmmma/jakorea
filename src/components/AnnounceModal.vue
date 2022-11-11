@@ -36,7 +36,6 @@ export default {
             line-height: 1;
         }
         span{
-            transform: translateY(-10px);
             font-size: 40px;
             transition: 0.3s;
             color: #666;
