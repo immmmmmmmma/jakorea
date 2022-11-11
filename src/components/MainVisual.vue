@@ -172,5 +172,8 @@ export default {
 <style lang="scss" scoped>
     .btn{
         background: #fff;
+        &:hover{
+            background: none;
+        }
     }
 </style>
