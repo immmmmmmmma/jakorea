@@ -59,7 +59,7 @@ export default {
     }
     .navbar{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         margin-left: auto;
         li{
             padding: 10px 0;
