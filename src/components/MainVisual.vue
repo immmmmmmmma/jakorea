@@ -169,3 +169,8 @@ export default {
         
     }
 </style>
+<style lang="scss" scoped>
+    .btn{
+        background: #fff;
+    }
+</style>

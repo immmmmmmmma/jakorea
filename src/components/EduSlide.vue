@@ -106,7 +106,7 @@ export default {
 .eduAcc{
     position: absolute;
     top: 0;
-    left: 1410px;
+    right: 0;
     width: 520px;
     height: 100%;
     border-top-left-radius: 50px;

@@ -1,7 +1,7 @@
 <template>
   <div class="countBannerWrap">
-    <div><img :src="`./images/main-number-1.jpg`" alt="" class="col-12 col-md-5"></div>
-    <ul class="count col-12 col-md-7">
+    <div><img :src="`./images/main-number-1.jpg`" alt="" class="col-12 col-md-7"></div>
+    <ul class="count col-12 col-md-5">
         <li>
             <span class="countBar"></span>+200
             <p><b>지역 네트워크</b>전국 17개 시도 200개이상의 지역에서 교육하고 있습니다.</p>
