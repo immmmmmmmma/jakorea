@@ -173,7 +173,7 @@ export default {
     .btn{
         background: #fff;
         &:hover{
-            background: none;
+            background: none !important;
         }
     }
 </style>
